@@ -2,7 +2,7 @@ CREATE TABLE Kundeprofil (
     KundeID INTEGER PRIMARY KEY,
     Navn TEXT,
     Mobilnummer INTEGER,
-    Adresse TEXT,
+    Adresse TEXT
 );
 
 CREATE TABLE Billett (
@@ -21,11 +21,11 @@ CREATE TABLE Billett (
     FOREIGN KEY (Radnummer) REFERENCES Stol(Radnummer) ON DELETE NO ACTION ON UPDATE CASCADE
 );
 
-CREATE TABLE Billettkjop (
+CREATE TABLE Billettkjoep (
     BillettID INTEGER PRIMARY KEY,
     KundeID INTEGER NOT NULL,
-    Dato TEXT,
-    Klokkeslett TEXT,
+    Dato TEXT NOT NULL,
+    Klokkeslett TEXT NOT NULL,
     FOREIGN KEY (BillettID) REFERENCES Billett(BillettID) ON DELETE NO ACTION ON UPDATE CASCADE,
     FOREIGN KEY (KundeID) REFERENCES Kundeprofil(KundeID) ON DELETE NO ACTION ON UPDATE CASCADE
 );
@@ -98,13 +98,11 @@ CREATE TABLE Skuespiller (
 );
 
 CREATE TABLE SpillerRolle (
-    Forestillingsdato TEXT NOT NULL,
     SkuespillerID INTEGER NOT NULL,
-    RolleID TEXT NOT NULL,
-    FOREIGN KEY (Forestillingsdato) REFERENCES Teaterforestilling(Dato) ON DELETE CASCADE ON UPDATE CASCADE,
+    RolleID INTEGER NOT NULL,
     FOREIGN KEY (SkuespillerID) REFERENCES Skuespiller(AnsattID) ON DELETE NO ACTION ON UPDATE CASCADE,
     FOREIGN KEY (RolleID) REFERENCES Rolle(RolleID) ON DELETE NO ACTION ON UPDATE CASCADE,
-    PRIMARY KEY (Forestillingsdato, SkuespillerID, RolleID)
+    PRIMARY KEY (SkuespillerID, RolleID)
 );
 
 CREATE TABLE Medvirkende (
@@ -113,4 +111,10 @@ CREATE TABLE Medvirkende (
     Epostadresse TEXT,
     Ansattstatus TEXT,
     Ansattype TEXT,
+);
+
+CREATE TABLE Direktoer (
+    AnsattID INTEGER PRIMARY KEY,
+    Navn TEXT,
+    Epostadresse TEXT
 );

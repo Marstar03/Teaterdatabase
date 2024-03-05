@@ -111,6 +111,9 @@ CREATE TABLE Medvirkende (
     Epostadresse TEXT,
     Ansattstatus TEXT,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7a5b3f7 (Updated database sql file)
     Ansattype TEXT,
 );
 
@@ -118,7 +121,10 @@ CREATE TABLE Direktoer (
     AnsattID INTEGER PRIMARY KEY,
     Navn TEXT,
     Epostadresse TEXT
+<<<<<<< HEAD
 =======
     Ansattype TEXT
 >>>>>>> d3f1edb (added the py script)
+=======
+>>>>>>> 7a5b3f7 (Updated database sql file)
 );

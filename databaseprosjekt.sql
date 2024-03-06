@@ -50,7 +50,7 @@ CREATE TABLE Stol (
 
 CREATE TABLE Teatersal (
     SalID INTEGER PRIMARY KEY,
-    Navn TEXT,
+    Navn TEXT
 );
 
 CREATE TABLE Teaterstykke (
@@ -58,7 +58,7 @@ CREATE TABLE Teaterstykke (
     Navn TEXT,
     Sesong TEXT,
     SalID INTEGER NOT NULL,
-    FOREIGN KEY (SalID) REFERENCES Teatersal(SalID) ON DELETE NO ACTION ON UPDATE CASCADE,
+    FOREIGN KEY (SalID) REFERENCES Teatersal(SalID) ON DELETE NO ACTION ON UPDATE CASCADE
 );
 
 CREATE TABLE Teaterforestilling (
@@ -78,7 +78,7 @@ CREATE TABLE Akt (
 
 CREATE TABLE Rolle (
     RolleID INTEGER PRIMARY KEY,
-    Navn TEXT,
+    Navn TEXT
 );
 
 CREATE TABLE RolleIAkt (
@@ -94,7 +94,7 @@ CREATE TABLE RolleIAkt (
 CREATE TABLE Skuespiller (
     AnsattID INTEGER PRIMARY KEY,
     Navn TEXT,
-    Epostadresse TEXT,
+    Epostadresse TEXT
 );
 
 CREATE TABLE SpillerRolle (
@@ -110,6 +110,7 @@ CREATE TABLE Medvirkende (
     Navn TEXT,
     Epostadresse TEXT,
     Ansattstatus TEXT,
+<<<<<<< HEAD
     Ansattype TEXT,
 );
 
@@ -117,4 +118,7 @@ CREATE TABLE Direktoer (
     AnsattID INTEGER PRIMARY KEY,
     Navn TEXT,
     Epostadresse TEXT
+=======
+    Ansattype TEXT
+>>>>>>> d3f1edb (added the py script)
 );

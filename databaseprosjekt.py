@@ -28,7 +28,10 @@ while True:
     
     if user_input.lower() == "exit":
         break
-    
+    if user_input.lower() == "help":
+        print("Type 'exit' to exit the program")
+        
+        continue
     try:
         cursor.execute(user_input)
         print(cursor.fetchall())

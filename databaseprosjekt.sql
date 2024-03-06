@@ -113,6 +113,7 @@ CREATE TABLE Medvirkende (
     Epostadresse TEXT,
     Ansattstatus TEXT,
     Ansattype TEXT
+    Ansattype TEXT,
 );
 
 CREATE TABLE Direktoer (
@@ -120,4 +121,6 @@ CREATE TABLE Direktoer (
     Navn TEXT,
     Epostadresse TEXT,
     Ansattstatus TEXT
+    Epostadresse TEXT
+    Ansattype TEXT
 );

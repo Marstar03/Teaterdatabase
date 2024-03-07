@@ -1,12 +1,12 @@
 CREATE TABLE Kundeprofil (
-    KundeID INTEGER PRIMARY KEY,
+    KundeID INTEGER PRIMARY KEY AUTO_INCREMENT,
     Navn TEXT,
     Mobilnummer INTEGER,
     Adresse TEXT
 );
 
 CREATE TABLE Billett (
-    BillettID INTEGER PRIMARY KEY,
+    BillettID INTEGER PRIMARY KEY AUTO_INCREMENT,
     StykkeID TEXT NOT NULL,
     Forestillingsdato TEXT NOT NULL,
     Stolnummer INTEGER NOT NULL,
@@ -54,7 +54,7 @@ CREATE TABLE Teatersal (
 );
 
 CREATE TABLE Teaterstykke (
-    StykkeID INTEGER PRIMARY KEY,
+    StykkeID INTEGER PRIMARY KEY AUTO_INCREMENT,
     Navn TEXT,
     Tidspunkt TEXT,
     Sesong TEXT,
@@ -78,7 +78,7 @@ CREATE TABLE Akt (
 );
 
 CREATE TABLE Rolle (
-    RolleID INTEGER PRIMARY KEY,
+    RolleID INTEGER PRIMARY KEY AUTO_INCREMENT,
     Navn TEXT
 );
 
@@ -93,7 +93,7 @@ CREATE TABLE RolleIAkt (
 );
 
 CREATE TABLE Skuespiller (
-    AnsattID INTEGER PRIMARY KEY,
+    AnsattID INTEGER PRIMARY KEY AUTO_INCREMENT,
     Navn TEXT,
     Epostadresse TEXT,
     Ansattstatus TEXT

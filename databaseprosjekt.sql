@@ -1,8 +1,8 @@
 CREATE TABLE Kundeprofil (
     KundeID INTEGER PRIMARY KEY AUTOINCREMENT,
-    Navn TEXT,
-    Mobilnummer INTEGER,
-    Adresse TEXT
+    Navn TEXT NOT NULL,
+    Mobilnummer INTEGER NOT NULL,
+    Adresse TEXT NOT NULL
 );
 
 CREATE TABLE Billett (
@@ -13,8 +13,8 @@ CREATE TABLE Billett (
     Radnummer INTEGER NOT NULL,
     OmraadeNavn INTEGER NOT NULL,
     SalNavn INTEGER NOT NULL,
-    Billettype TEXT,
-    Pris INTEGER,
+    Billettype TEXT NOT NULL,
+    Pris INTEGER NOT NULL,
     FOREIGN KEY (StykkeID) REFERENCES Teaterforestilling(StykkeID) ON DELETE NO ACTION ON UPDATE CASCADE,
     FOREIGN KEY (Forestillingsdato) REFERENCES Teaterforestilling(Dato) ON DELETE NO ACTION ON UPDATE CASCADE,
     FOREIGN KEY (Stolnummer) REFERENCES Stol(Stolnummer) ON DELETE NO ACTION ON UPDATE CASCADE,
@@ -50,16 +50,28 @@ CREATE TABLE Stol (
 );
 
 CREATE TABLE Teatersal (
-    Navn TEXT PRIMARY KEY
+    Navn TEXT PRIMARY KEY NOT NULL
 );
 
 CREATE TABLE Teaterstykke (
     StykkeID INTEGER PRIMARY KEY AUTOINCREMENT,
-    Navn TEXT,
-    Tidspunkt TEXT,
-    Sesong TEXT,
+    Navn TEXT NOT NULL,
+    Tidspunkt TEXT NOT NULL,
+    Sesong TEXT NOT NULL,
     SalNavn INTEGER NOT NULL,
     FOREIGN KEY (SalNavn) REFERENCES Teatersal(Navn) ON DELETE NO ACTION ON UPDATE CASCADE
+);
+
+CREATE TABLE Gruppe(
+    BilettType TEXT PRIMARY KEY NOT NULL
+);
+
+CREATE TABLE TillaterGruppe (
+    BilettType TEXT NOT NULL,
+    StykkeID INTEGER NOT NULL,
+    FOREIGN KEY (BilettType) REFERENCES Gruppe(BilettType) ON DELETE NO ACTION ON UPDATE CASCADE,
+    FOREIGN KEY (StykkeID) REFERENCES Teaterstykke(StykkeID) ON DELETE NO ACTION ON UPDATE CASCADE,
+    PRIMARY KEY (BilettType, StykkeID)
 );
 
 CREATE TABLE Teaterforestilling (
@@ -72,14 +84,14 @@ CREATE TABLE Teaterforestilling (
 CREATE TABLE Akt (
     StykkeID INTEGER NOT NULL,
     Aktnummer INTEGER NOT NULL,
-    Navn TEXT,
+    Navn TEXT NOT NULL,
     FOREIGN KEY (StykkeID) REFERENCES Teaterstykke(StykkeID) ON DELETE NO ACTION ON UPDATE CASCADE,
     PRIMARY KEY (StykkeID, Aktnummer)
 );
 
 CREATE TABLE Rolle (
     RolleID INTEGER PRIMARY KEY AUTOINCREMENT,
-    Navn TEXT
+    Navn TEXT NOT NULL
 );
 
 CREATE TABLE RolleIAkt (
@@ -94,9 +106,9 @@ CREATE TABLE RolleIAkt (
 
 CREATE TABLE Skuespiller (
     AnsattID INTEGER PRIMARY KEY AUTOINCREMENT,
-    Navn TEXT,
-    Epostadresse TEXT,
-    Ansattstatus TEXT
+    Navn TEXT NOT NULL,
+    Epostadresse TEXT NOT NULL,
+    Ansattstatus TEXT NOT NULL
 );
 
 CREATE TABLE SpillerRolle (
@@ -108,16 +120,24 @@ CREATE TABLE SpillerRolle (
 );
 
 CREATE TABLE Medvirkende (
-    AnsattID INTEGER PRIMARY KEY,
-    Navn TEXT,
-    Epostadresse TEXT,
-    Ansattstatus TEXT,
-    Ansattype TEXT
+    AnsattID INTEGER PRIMARY KEY AUTOINCREMENT,
+    Navn TEXT NOT NULL NOT NULL,
+    Epostadresse TEXT NOT NULL,
+    Ansattstatus TEXT NOT NULL,
+    Ansattype TEXT NOT NULL
+);
+
+CREATE TABLE MedvirkendeForStykke(
+    StykkeID INTEGER NOT NULL,
+    AnsattID INTEGER NOT NULL,
+    FOREIGN KEY (StykkeID) REFERENCES Teaterstykke(StykkeID) ON DELETE NO ACTION ON UPDATE CASCADE,
+    FOREIGN KEY (AnsattID) REFERENCES Medvirkende(AnsattID) ON DELETE NO ACTION ON UPDATE CASCADE,
+    PRIMARY KEY (StykkeID, AnsattID)
 );
 
 CREATE TABLE Direktoer (
-    AnsattID INTEGER PRIMARY KEY,
-    Navn TEXT,
-    Epostadresse TEXT,
-    Ansattstatus TEXT
+    AnsattID INTEGER PRIMARY KEY AUTOINCREMENT,
+    Navn TEXT NOT NULL,
+    Epostadresse TEXT NOT NULL,
+    Ansattstatus TEXT NOT NULL
 );

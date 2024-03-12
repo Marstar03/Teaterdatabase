@@ -17,7 +17,10 @@ try:
         INNER JOIN SpillerRolle ON S.AnsattID = SpillerRolle.SkuespillerID
         INNER JOIN RolleIAkt AS RIA2 ON SpillerRolle.RolleID = RIA2.RolleID
         WHERE S.Navn = ?)''', (input_navn,))
-    print(cursor.fetchall())
+    rows = cursor.fetchall()
+    print("Finner motspillere til " + input_navn)
+    for row in rows:
+        print(row)
 except Exception as msg:
     print("Command failed: ", msg)
 

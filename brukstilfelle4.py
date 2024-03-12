@@ -12,4 +12,4 @@ def finn_forestilling(Dato):
     print(rows)
     con.close()
 
-finn_forestilling("2024-12-03")
+finn_forestilling("2024-02-03")

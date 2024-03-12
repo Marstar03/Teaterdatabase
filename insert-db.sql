@@ -17,25 +17,19 @@ INSERT INTO Teaterstykke(Navn, Tidspunkt, Sesong, SalNavn) VALUES ('Størst av a
 INSERT INTO Teaterstykke(Navn, Tidspunkt, Sesong, SalNavn) VALUES ('Kongsemnene', '18:30', 'Vår 2024', 'Hovedscenen');
 
 -- Legger inn teaterforestillinger for Størst av alt er kjærligheten
-INSERT INTO Teaterforestilling(Dato, StykkeID) VALUES ('2024-11-03', 1);
-INSERT INTO Teaterforestilling(Dato, StykkeID) VALUES ('2024-12-03', 1);
-INSERT INTO Teaterforestilling(Dato, StykkeID) VALUES ('2024-18-03', 1);
-INSERT INTO Teaterforestilling(Dato, StykkeID) VALUES ('2024-19-03', 1);
-INSERT INTO Teaterforestilling(Dato, StykkeID) VALUES ('2024-02-04', 1);
-INSERT INTO Teaterforestilling(Dato, StykkeID) VALUES ('2024-03-04', 1);
-INSERT INTO Teaterforestilling(Dato, StykkeID) VALUES ('2024-23-04', 1);
-INSERT INTO Teaterforestilling(Dato, StykkeID) VALUES ('2024-25-04', 1);
-INSERT INTO Teaterforestilling(Dato, StykkeID) VALUES ('2024-29-04', 1);
+INSERT INTO Teaterforestilling(Dato, StykkeID) VALUES ('2024-02-03', 1);
+INSERT INTO Teaterforestilling(Dato, StykkeID) VALUES ('2024-02-06', 1);
+INSERT INTO Teaterforestilling(Dato, StykkeID) VALUES ('2024-02-07', 1);
+INSERT INTO Teaterforestilling(Dato, StykkeID) VALUES ('2024-02-12', 1);
+INSERT INTO Teaterforestilling(Dato, StykkeID) VALUES ('2024-02-13', 1);
+INSERT INTO Teaterforestilling(Dato, StykkeID) VALUES ('2024-02-14', 1);
 
 -- Legger inn teaterforestillinger for Kongsemnene
-INSERT INTO Teaterforestilling(Dato, StykkeID) VALUES ('2024-12-03', 2);
-INSERT INTO Teaterforestilling(Dato, StykkeID) VALUES ('2024-19-03', 2);
-INSERT INTO Teaterforestilling(Dato, StykkeID) VALUES ('2024-02-04', 2);
-INSERT INTO Teaterforestilling(Dato, StykkeID) VALUES ('2024-03-04', 2);
-INSERT INTO Teaterforestilling(Dato, StykkeID) VALUES ('2024-11-04', 2);
-INSERT INTO Teaterforestilling(Dato, StykkeID) VALUES ('2024-12-04', 2);
-INSERT INTO Teaterforestilling(Dato, StykkeID) VALUES ('2024-13-04', 2);
-INSERT INTO Teaterforestilling(Dato, StykkeID) VALUES ('2024-15-04', 2);
+INSERT INTO Teaterforestilling(Dato, StykkeID) VALUES ('2024-02-01', 2);
+INSERT INTO Teaterforestilling(Dato, StykkeID) VALUES ('2024-02-02', 2);
+INSERT INTO Teaterforestilling(Dato, StykkeID) VALUES ('2024-02-03', 2);
+INSERT INTO Teaterforestilling(Dato, StykkeID) VALUES ('2024-02-05', 2);
+INSERT INTO Teaterforestilling(Dato, StykkeID) VALUES ('2024-02-06', 2);
 
 -- Legger inn akter for Størst av alt er kjærligheten
 INSERT INTO Akt(StykkeID, Aktnummer, Navn) VALUES (1, 1, 'Akt 1');

@@ -35,7 +35,7 @@ for section, value in seating.items():
     for row_number, seats in value.items():
         for seat_number, seat in seats:
             if(seat == 1):
-                stykkeID = cursor.execute('SELECT StykkeID FROM Teaterstykke WHERE Navn = "Kongsemnene" AND Sesong = "Vår 2024";').fetchone()[0]
+                stykkeID = cursor.execute('SELECT StykkeID FROM Teaterstykke WHERE Navn = "Størst av alt er kjærligheten" AND Sesong = "Vår 2024";').fetchone()[0]
                 cursor.execute('INSERT INTO Billett(StykkeID, Forestillingsdato, Stolnummer, Radnummer, OmraadeNavn, SalNavn, Billettype, Pris) VALUES(?, ?, ?, ?, ?, ?, ?, ?);', (stykkeID, forestillingsdato, seat_number, row_number, section, 'Gamle scene', 'Ordinær', 350))
                 bilettID = cursor.execute('SELECT BillettID FROM Billett WHERE StykkeID = ? AND Forestillingsdato = ? AND Stolnummer = ? AND Radnummer = ? AND OmraadeNavn = ? AND SalNavn = ? AND Billettype = ? AND Pris = ?;', (stykkeID, forestillingsdato, seat_number, row_number, section, 'Gamle scene', 'Ordinær', 350)).fetchone()[0]
                 kundeID = cursor.execute('SELECT KundeID FROM Kundeprofil WHERE Navn = ? ', ('Dummy profile 1',)).fetchone()[0]

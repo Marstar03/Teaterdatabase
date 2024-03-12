@@ -28,7 +28,7 @@ for rad in range(1, 4):
             break
 if(row > 0):
     stykkeID = cursor.execute('SELECT StykkeID FROM Teaterstykke JOIN Stol ON Teaterstykke.SalNavn = Stol.SalNavn').fetchone()[0]
-    forestillingsdato = "2024-02-01"
+    forestillingsdato = "2024-02-03"
     datoBillettkjop = "2024-01-25"
     salNavn = cursor.execute('SELECT SalNavn FROM Teaterstykke WHERE StykkeID = ?', (stykkeID,)).fetchone()[0]
     billettype = "Ordinær"

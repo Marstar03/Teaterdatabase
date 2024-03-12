@@ -23,7 +23,7 @@ with open('./gamle-scene.txt', 'r') as file:
 with open('./gamle-scene.txt', 'r') as file:
     for line in file:
         if 'Dato' in line:
-            forestillingsdato = line.split(' ')[1]
+            forestillingsdato = line.split(' ')[1].strip()
             break
 
 con = sqlite3.connect('teater.db')

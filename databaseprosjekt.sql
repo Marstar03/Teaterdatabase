@@ -7,7 +7,7 @@ CREATE TABLE Kundeprofil (
 
 CREATE TABLE Billett (
     BillettID INTEGER PRIMARY KEY AUTOINCREMENT,
-    StykkeID TEXT NOT NULL,
+    StykkeID INTEGER NOT NULL,
     Forestillingsdato TEXT NOT NULL,
     Stolnummer INTEGER NOT NULL,
     Radnummer INTEGER NOT NULL,
@@ -58,7 +58,7 @@ CREATE TABLE Teaterstykke (
     Navn TEXT NOT NULL,
     Tidspunkt TEXT NOT NULL,
     Sesong TEXT NOT NULL,
-    SalNavn INTEGER NOT NULL,
+    SalNavn TEXT NOT NULL,
     FOREIGN KEY (SalNavn) REFERENCES Teatersal(Navn) ON DELETE NO ACTION ON UPDATE CASCADE
 );
 

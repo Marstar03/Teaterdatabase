@@ -1,5 +1,6 @@
 -- Oppretter kundeprofil som kan brukes i programmet
-INSERT INTO Kundeprofil(KundeID, Navn, Mobilnummer, Adresse) VALUES (1, 'Dummy profile', 78282283, 'Dummy adress');
+INSERT INTO Kundeprofil(Navn, Mobilnummer, Adresse) VALUES ('Dummy profile 1', 78282283, 'Dummy adress 1');
+INSERT INTO Kundeprofil(Navn, Mobilnummer, Adresse) VALUES ('Dummy profile 2', 78282283, 'Dummy adress 2');
 
 -- Oppretter teatersaler sammen med tilhørende områder
 INSERT INTO Teatersal(Navn) VALUES ('Gamle scene');

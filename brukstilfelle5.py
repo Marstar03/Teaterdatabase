@@ -9,5 +9,7 @@ cursor.execute('''SELECT distinct Teaterstykke.Navn, Skuespiller.Navn, Rolle.Nav
     inner join Teaterstykke on (RolleIAkt.StykkeID = Teaterstykke.StykkeID)''')
 
 rows = cursor.fetchall()
-print(rows)
+print("Skriver ut skuespillere, samt deres rolle og teaterstykke")
+for row in rows:
+    print(row)
 con.close()

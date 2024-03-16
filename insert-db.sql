@@ -193,6 +193,7 @@ INSERT INTO SpillerRolle(SkuespillerID, RolleID) VALUES (14, 20);
 INSERT INTO SpillerRolle(SkuespillerID, RolleID) VALUES (15, 18);
 INSERT INTO SpillerRolle(SkuespillerID, RolleID) VALUES (16, 16);
 INSERT INTO SpillerRolle(SkuespillerID, RolleID) VALUES (17, 13); --Er nok feil, men finner ingen andre som skal spille rolle 13, og rollen til spiller 17 finner jeg ikke
+                                                                    -- nr 17, altså fabian lunde skal egt spille Baard Bratte/trønder
 INSERT INTO SpillerRolle(SkuespillerID, RolleID) VALUES (18, 10);
 INSERT INTO SpillerRolle(SkuespillerID, RolleID) VALUES (18, 9);
 INSERT INTO SpillerRolle(SkuespillerID, RolleID) VALUES (19, 21);

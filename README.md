@@ -1,5 +1,19 @@
 # Gruppe 109 prosjektoppgave, Teaterdatabase
 
+**Sigurd Hagen, Markus Klund og Markus Helbæk**
+
+## Innholdsfortegnelse
+
+- Brukstilfelle 1
+- Brukstilfelle 2
+- Brukstilfelle 3
+- Brukstilfelle 4
+- Brukstilfelle 5
+- Brukstilfelle 6
+- Brukstilfelle 7
+- Antagelser
+- Endringer
+  
 Denne [README.md](./README.md) filen er en beskrivelse på hvordan kjøring av scriptene skal gjennomføres. 
 
 #### Brukstilfelle 1

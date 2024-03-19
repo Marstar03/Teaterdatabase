@@ -2,9 +2,9 @@
 Denne [README.md](./README.md) filen er en beskrivelse på hvordan kjøring av scriptene skal gjennomføres. 
 
 #### Brukstilfelle 1
-For å initsialisere databasen vår må en kjøre [brukstilfelle1](./brukstilfelle1.py). Etter kjøring av dette scriptet vil det, hvis det ikke eksisterer noen [teater.db](./teater.db), bli opprettet en [teater.db](./teater.db) fil hvor alle tabbellene fra databasen vår blir realisert og noe forhåndsinsettinger av data. For eksempel stolene, salen, stykkene, etc. Databasen [teater.db](./teater.db) kan vises med verktøy som **DB Browser for SQLite**. 
+For å initsialisere databasen vår må en kjøre [brukstilfelle1](./brukstilfelle1.py). Etter kjøring av dette scriptet vil det, hvis det ikke eksisterer noen [teater.db](./teater.db), bli opprettet en [teater.db](./teater.db) fil hvor alle tabellene fra databasen vår blir realisert og noe forhåndsinnsettinger av data. For eksempel stolene, salen, stykkene, etc. Databasen [teater.db](./teater.db) kan vises med verktøy som **DB Browser for SQLite**. 
 
-Initsialiseringen og opprettelsen av [teater.db](./teater.db) må skje før de andre brukstilfellene kjøres. Det å kjøre scriptet flere ganger vil være uhensitsmessig da de insatte datene allerede er satt inn. 
+Initsialiseringen og opprettelsen av [teater.db](./teater.db) må skje før de andre brukstilfellene kjøres. Det å kjøre scriptet flere ganger vil være uhensiktsmessig da de insatte datene allerede er satt inn. 
 
 #### Brukstilfelle 2
 Både [brukstilfelle2(scan-seats-gamle-scene).py](./brukstilfelle2(scan-seats-gamle-scene).py) og [brukstilfelle2(scan-seats-hovedscenen).py](./brukstilfelle2(scan-seats-hovedscenen).py) svarer på brukerhistorie 2. [brukstilfelle2(scan-seats-gamle-scene).py](./brukstilfelle2(scan-seats-gamle-scene).py) vil se igjennom filen [gamle-scene.txt](./gamle-scene.txt) sete for sete og vil for opptatte seter sette inn et kjøp i databasen på en bruker kalt *Dummy profile 1*. Tilsvarende er det for [brukstilfelle2(scan-seats-hovedscenen.py)](./brukstilfelle2(scan-seats-hovedscenen).py) som vil se igjennom filen [hovedscenen.txt](./hovedscenen.txt).
@@ -28,4 +28,4 @@ Scriptet kan kjøres når som helst så mange ganger man vil.
 [brukstilfelle6.py](./brukstilfelle6.py) finner og sorterer alle forestillingen basert på antall solgte billetter. Kan kjøres når som helst så mange ganger man vil.
 
 #### Brukstilfelle 7
-[brukstilfelle7.py](./brukstilfelle7.py) finner alle skuespillere som har spilt i samme akt samt hvilke skuespill de spilte sammen i basert på et navn. Kan kjøres når som helst så mange ganger man vil.
+[brukstilfelle7.py](./brukstilfelle7.py) finner alle skuespillere som har spilt i samme akt samt hvilke forestilling de spilte sammen i basert på et navn. Kan kjøres når som helst så mange ganger man vil.

@@ -29,3 +29,19 @@ Scriptet kan kjøres når som helst så mange ganger man vil.
 
 #### Brukstilfelle 7
 [brukstilfelle7.py](./brukstilfelle7.py) finner alle skuespillere som har spilt i samme akt samt hvilke forestilling de spilte sammen i basert på et navn. Kan kjøres når som helst så mange ganger man vil.
+
+
+## Antagelser
+1. Størst av alt er kjærligheten har én akt
+2. Rollene i Størst av alt er kjærligheten er: Gunnar, Erling, Biskop Nikolas, Ornulf, Dagny, Margit og Ase.
+3. Antar at skuespiller er det som oppgis som medvirkende på nettsiden, og medvirkende er det som oppgis som kunstnerisk lag
+4. Antar at ansattes epost er av typen: fornavn.etternavn@trondelagteater.no.
+5. Ansattstatus til en skuespiller bestemmes ut ifra om de deltar på to eller flere stykker for vår 2024.
+6. Ansattstatus for medvirkende bestemmes ut ifra gitt informasjon om brukeren og gruppas subjektive tolkning av denne informasjonen.
+7. Vi baserer oss på Kongsemene-rollene som står i oppgavedokumentet. Der står rollen Guttorm Ingesson. Denne rollen blir derimot ikke spilt av noen skuespillere på nettsiden. Siden det står at Fabian Heidelberg Lunde spiller rollen Baard Bratte, som ikke nevnes i oppgavedokumentet, velger vi å legge inn at Fabian Lunde spiller rollen Guttorm Ingesson.
+8. I oppgavedokumentet nevnes rollen Ingeborg, mens det på nettsiden står Ingebjørg, men ingen Ingeborg. Tolker det som at disse refererer til samme rolle,og lar Emma Caroline Deichmann spille Ingeborg
+
+
+## Endringer
+Det er gjort et par endringer siden innleveringen av DB1.I [databaseprosjekt.slq](./databaseprosjekt.sql) har billettType og pris blitt satt som fremmednøkkler til Gruppe og TillaterGruppe. Det er også blitt lagt til nye *INSERT* queries til [insert-db.sql](./insert-db.sql) som setter inn alle verdiene for bilettType og pris.
+

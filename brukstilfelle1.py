@@ -1,21 +1,9 @@
 import sqlite3
 
-## Initialisering av databasen fra databaseprosjekt.sql og insert-db.sql til .db filen teater.db
+## Insetting av verdier til databasen fra insert-db.sql til teater.db
 con = sqlite3.connect('teater.db')
 
 cursor = con.cursor()
-
-fd = open('./databaseprosjekt.sql', 'r')
-sqlFile = fd.read()
-fd.close()
-
-sqlCommands1 = sqlFile.split(';')
-
-for command in sqlCommands1:
-    try:
-        cursor.execute(command)
-    except Exception as msg:
-        print("Command skipped: ", msg)
 
 fd = open('./insert-db.sql', 'r')
 sqlFile = fd.read()

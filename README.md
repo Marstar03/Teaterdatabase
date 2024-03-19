@@ -4,7 +4,7 @@ Denne [README.md](./README.md) filen er en beskrivelse på hvordan kjøring av s
 
 #### Brukstilfelle 1
 
-For å initsialisere databasen vår må en kjøre [brukstilfelle1](./brukstilfelle1.py). Etter kjøring av dette scriptet vil det, hvis det ikke eksisterer noen [teater.db](./teater.db), bli opprettet en [teater.db](./teater.db) fil hvor alle tabellene fra databasen vår blir realisert og noe forhåndsinnsettinger av data. For eksempel stolene, salen, stykkene, etc. Databasen [teater.db](./teater.db) kan vises med verktøy som **DB Browser for SQLite**. 
+For å initsialisere databasen vår må en kjøre [brukstilfelle1](./brukstilfelle1.py). Etter kjøring av dette scriptet vil det, hvis det i eksistererende [teater.db](./teater.db), bli opprettet en [teater.db](./teater.db) fil hvor alle tabellene fra databasen vår blir realisert og noe forhåndsinnsettinger av data. For eksempel stolene, salen, stykkene, etc. Databasen [teater.db](./teater.db) kan vises med verktøy som **DB Browser for SQLite**. 
 
 Initsialiseringen og opprettelsen av [teater.db](./teater.db) må skje før de andre brukstilfellene kjøres. Det å kjøre scriptet flere ganger vil være uhensiktsmessig da de insatte datene allerede er satt inn. 
 

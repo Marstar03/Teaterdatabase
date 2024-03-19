@@ -31,6 +31,30 @@ INSERT INTO Teaterforestilling(Dato, StykkeID) VALUES ('2024-02-03', 2);
 INSERT INTO Teaterforestilling(Dato, StykkeID) VALUES ('2024-02-05', 2);
 INSERT INTO Teaterforestilling(Dato, StykkeID) VALUES ('2024-02-06', 2);
 
+-- Legger inn pris og type billetter.
+INSERT INTO Gruppe(BillettType) VALUES ('Ordinær');
+INSERT INTO Gruppe(BillettType) VALUES ('Honnør');
+INSERT INTO Gruppe(BillettType) VALUES ('Student');
+INSERT INTO Gruppe(BillettType) VALUES ('Barn');
+INSERT INTO Gruppe(BillettType) VALUES ('Gruppe 10');
+INSERT INTO Gruppe(BillettType) VALUES ('Gruppe honnør 10');
+
+-- Legger inn gruppe og pris for Kongsemnene
+INSERT INTO TillaterGruppe(BillettType, StykkeID, Pris) VALUES ('Ordinær', 2, 450);
+INSERT INTO TillaterGruppe(BillettType, StykkeID, Pris) VALUES ('Honnør', 2, 380);
+INSERT INTO TillaterGruppe(BillettType, StykkeID, Pris) VALUES ('Student', 2, 280);
+INSERT INTO TillaterGruppe(BillettType, StykkeID, Pris) VALUES ('Gruppe 10', 2, 420);
+INSERT INTO TillaterGruppe(BillettType, StykkeID, Pris) VALUES ('Gruppe honnør 10', 2, 360);
+
+-- Legger inn gruppe og pris for Størst av alt er kjærligheten
+INSERT INTO TillaterGruppe(BillettType, StykkeID, Pris) VALUES ('Ordinær', 1, 350);
+INSERT INTO TillaterGruppe(BillettType, StykkeID, Pris) VALUES ('Honnør', 1, 300);
+INSERT INTO TillaterGruppe(BillettType, StykkeID, Pris) VALUES ('Student', 1, 220);
+INSERT INTO TillaterGruppe(BillettType, StykkeID, Pris) VALUES ('Barn', 1, 220);
+INSERT INTO TillaterGruppe(BillettType, StykkeID, Pris) VALUES ('Gruppe 10', 1, 320);
+INSERT INTO TillaterGruppe(BillettType, StykkeID, Pris) VALUES ('Gruppe honnør 10', 1, 270);
+
+
 -- Legger inn akter for Størst av alt er kjærligheten
 INSERT INTO Akt(StykkeID, Aktnummer, Navn) VALUES (1, 1, 'Akt 1');
 

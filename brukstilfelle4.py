@@ -1,6 +1,6 @@
 import sqlite3
 
-#Implementasjon for brukerhistorie 4: Finn forestilling#
+## Implementasjon for brukerhistorie 4: Finn forestilling
 
 con = sqlite3.connect("teater.db")
 
@@ -13,4 +13,5 @@ def finn_forestilling(Dato):
         print(row)
     con.close()
 
-finn_forestilling("2024-02-03")
+date = input("Skriv inn dato for forestillingen du vil finne. Datoen må være på formen År-Måned-Dag: ")
+finn_forestilling(date)

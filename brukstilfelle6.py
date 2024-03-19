@@ -1,6 +1,6 @@
 import sqlite3
 
-#Implementasjon for brukerhistorie 6: Finn mest populære forestilling#
+## Implementasjon for brukerhistorie 6: Finn mest populære forestilling
 con = sqlite3.connect("teater.db")
 
 def finn_mest_populære_forestilling():

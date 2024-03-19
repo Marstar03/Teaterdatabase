@@ -1,15 +1,9 @@
 import sqlite3
-import pyfiglet
 
-heading = "Realiserer DB"
-result = pyfiglet.figlet_format(heading, font = "slant")
-print(result)
-
+## Initialisering av databasen fra databaseprosjekt.sql og insert-db.sql til .db filen teater.db
 con = sqlite3.connect('teater.db')
 
 cursor = con.cursor()
-
-## Realize tables
 
 fd = open('./databaseprosjekt.sql', 'r')
 sqlFile = fd.read()
@@ -22,9 +16,6 @@ for command in sqlCommands1:
         cursor.execute(command)
     except Exception as msg:
         print("Command skipped: ", msg)
-    
-
-## Realize data
 
 fd = open('./insert-db.sql', 'r')
 sqlFile = fd.read()
@@ -38,8 +29,8 @@ for command in sqlCommands2:
     except Exception as msg:
         print("Command skipped: ", msg)
 
-
-## Hovedscenen generell
+## Flere insert statements for å legge til stoler i databasen
+## Hovedscenen parkett
 row = 1
 for i in range(1, 505):
     cursor.execute('INSERT INTO Stol(SalNavn, OmraadeNavn, Stolnummer, Radnummer) VALUES(?, ?, ?, ?);', ('Hovedscenen', 'Parkett', i, row))
@@ -76,7 +67,6 @@ for i in range(1, 18):
     cursor.execute('INSERT INTO Stol(SalNavn, OmraadeNavn, Stolnummer, Radnummer) VALUES(?, ?, ?, ?);', ('Gamle scene', 'Balkong', i, 4))
 
 ## Gamle scene parkett
-
 for i in range(1, 19):
     cursor.execute('INSERT INTO Stol(SalNavn, OmraadeNavn, Stolnummer, Radnummer) VALUES(?, ?, ?, ?);', ('Gamle scene', 'Parkett', i, 1))
 for i in range(1, 17):

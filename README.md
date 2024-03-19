@@ -53,3 +53,19 @@ Scriptet kan kjøres når som helst så mange ganger man vil.
 
 Det er gjort et par endringer siden innleveringen av DB1.I [databaseprosjekt.slq](./databaseprosjekt.sql) har billettType og pris blitt satt som fremmednøkkler til Gruppe og TillaterGruppe. Det er også blitt lagt til nye *INSERT* queries til [insert-db.sql](./insert-db.sql) som setter inn alle verdiene for bilettType og pris.
 
+## Tekstlige resultater fra brukerhistorienes spørringer.
+
+**Brukertilfelle1**
+![brukstilfelle1](./bilderForKjøring/brukstilfelle1.png)
+**Brukertilfelle2**
+![brukstilfelle2](./bilderForKjøring/brukstilfelle2.png)
+**Brukertilfelle3**
+![brukstilfelle3](./bilderForKjøring/brukstilfelle3.png)
+**Brukertilfelle4**
+![brukstilfelle4](./bilderForKjøring/brukstilfelle4.png)
+**Brukertilfelle5**
+![brukstilfelle5](./bilderForKjøring/brukstilfelle5.png)
+**Brukertilfelle6**
+![brukstilfelle6](./bilderForKjøring/brukstilfelle6.png)
+**Brukertilfelle7**
+![brukstilfelle7](./bilderForKjøring/brukstilfelle7.png)

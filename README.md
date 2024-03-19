@@ -12,7 +12,7 @@ Tekstlig resultat for brukstilfelle 1:
 
 #### Brukstilfelle 2
 
-Både [brukstilfelle2(scan-seats-gamle-scene).py](./brukstilfelle2(scan-seats-gamle-scene).py) og [brukstilfelle2(scan-seats-hovedscenen).py](./brukstilfelle2(scan-seats-hovedscenen).py) svarer på brukerhistorie 2. [brukstilfelle2(scan-seats-gamle-scene).py](./brukstilfelle2(scan-seats-gamle-scene).py) vil se igjennom filen [gamle-scene.txt](./gamle-scene.txt) sete for sete og vil for opptatte seter sette inn et kjøp i databasen på en bruker kalt *Dummy profile 1*. Tilsvarende er det for [brukstilfelle2(scan-seats-hovedscenen.py)](./brukstilfelle2(scan-seats-hovedscenen).py) som vil se igjennom filen [hovedscenen.txt](./hovedscenen.txt).
+Både [brukstilfelle2_scan_gamle_scene.py](./brukstilfelle2_scan_gamle_scene.py) og [brukstilfelle2_scan_hovedscenen.py](./brukstilfelle2_scan_hovedscenen.py) svarer på brukerhistorie 2. [brukstilfelle2_scan_gamle_scene.py](./brukstilfelle2_scan_gamle_scene.py) vil se igjennom filen [gamle-scene.txt](./gamle-scene.txt) sete for sete og vil for opptatte seter sette inn et kjøp i databasen på en bruker kalt *Dummy profile 1*. Tilsvarende er det for [brukstilfelle2_scan_hovedscenen.py](./brukstilfelle2_scan_hovedscenen.py) som vil se igjennom filen [hovedscenen.txt](./hovedscenen.txt).
 
 Så lenge [brukstilfelle1.py](./brukstilfelle1.py) er kjørt kan man kjøre denne filen når som  helst. Det å kjøre scriptet flere ganger vil være uhensiktsmessig da de insatte dataene allerede er satt inn.
 Tekstlig resultat for brukstilfelle 2:
@@ -22,7 +22,7 @@ Tekstlig resultat for brukstilfelle 2:
 
 Når en kjører [brukstilfelle3.py](./brukstilfelle3.py) vil scriptet hvis det finnes en rad med 9 ledige seter kjøpe 9 seter på samme rad. Kjøpene blir registrert på en bruker kalt *Dummy profile 2*. Summen av billettprisen vil da vises i terminalen.
 
-Så lenge [brukstilfelle1.py](./brukstilfelle1.py) er kjørt kan man kjøre denne filen når som  helst. Man kan kjøre scriptet flere ganger
+Så lenge [brukstilfelle1.py](./brukstilfelle1.py) er kjørt kan man kjøre denne filen når som  helst. Man kan kjøre scriptet flere ganger.
 Tekstlig resultat for brukstilfelle 3:
 ![brukstilfelle3](./bilderForKjøring/brukstilfelle3.png)
 
@@ -36,13 +36,13 @@ Tekstlig resultat for brukstilfelle 4:
 
 #### Brukstilfelle 5
 
-[brukstilfelle5.py](./brukstilfelle5.py) finner navn på alle skuespillerne som opptrer i de forskjellige teaterstykkene. Kan kjøres når som helst så mange ganger man vil.
+[brukstilfelle5.sql](./brukstilfelle5.sql) finner navn på alle skuespillerne som opptrer i de forskjellige teaterstykkene. Kan kjøres når som helst så mange ganger man vil.
 Tekstlig resultat for brukstilfelle 5:
 ![brukstilfelle5](./bilderForKjøring/brukstilfelle5.png)
 
 #### Brukstilfelle 6
 
-[brukstilfelle6.py](./brukstilfelle6.py) finner og sorterer alle forestillingen basert på antall solgte billetter. Kan kjøres når som helst så mange ganger man vil.
+[brukstilfelle6.sql](./brukstilfelle6.sql) finner og sorterer alle forestillingen basert på antall solgte billetter. Kan kjøres når som helst så mange ganger man vil.
 Tekstlig resultat for brukstilfelle 6:
 ![brukstilfelle6](./bilderForKjøring/brukstilfelle6.png)
 
